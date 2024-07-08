@@ -2,7 +2,7 @@
 #include "param.h"
 #include "spinlock.h"
 #include "riscv.h"
-#include "proc.h" // depends on spinlock & pagetable_t in riscv.h
+#include "proc.h"  // depends on spinlock & pagetable_t in riscv.h
 #include "syscall.h"
 #include "defs.h"
 

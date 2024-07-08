@@ -114,7 +114,8 @@ void pinPoint(uint64 returnValue, uint64 syscallId) {
     return;
   }
 
-  printf("%d: syscall %s -> %d\n", pid, syscallName[syscallId - 1], returnValue);
+  printf("%d: syscall %s -> %d\n", pid, syscallName[syscallId - 1],
+         returnValue);
 }
 
 void syscall(void) {
