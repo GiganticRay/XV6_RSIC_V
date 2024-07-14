@@ -32,6 +32,7 @@ OBJS = \
   $K/plic.o \
   $K/virtio_disk.o\
 	$K/systrace.o\
+	$K/syssysinfo.o\
 
 OBJS_KCSAN = \
   $K/start.o \
