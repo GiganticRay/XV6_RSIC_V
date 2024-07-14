@@ -69,3 +69,16 @@ void *kalloc(void) {
   if (r) memset((char *)r, 5, PGSIZE);  // fill with junk
   return (void *)r;
 }
+
+// Get the total free memory size in bytes.
+uint64 getFreeMemSize() {
+  uint64 size = 0;
+  struct run *r = kmem.freelist;
+  uint64 i = 0;
+  while(r){
+    ++i;
+    r = r->next;
+  }
+  size = i*PGSIZE;
+  return size;
+}

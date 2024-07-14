@@ -593,3 +593,13 @@ void procdump(void) {
     printf("\n");
   }
 }
+
+// Get the number of active processes.
+int getActiveProcCount() {
+  int num = 0;
+  for (int i = 0; i < NPROC; i++) {
+    if (proc[i].state != UNUSED)
+      num++;
+  }
+  return num;
+}
